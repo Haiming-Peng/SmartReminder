@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,11 +12,14 @@
 		368E42B324C27798006B8ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368E42B124C27798006B8ECD /* Main.storyboard */; };
 		368E42B524C277A0006B8ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368E42B424C277A0006B8ECD /* Assets.xcassets */; };
 		368E42B824C277A0006B8ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368E42B624C277A0006B8ECD /* LaunchScreen.storyboard */; };
-		368E42C024C2B46F006B8ECD /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42BF24C2B46F006B8ECD /* TapBarController.swift */; };
+		368E42C024C2B46F006B8ECD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42BF24C2B46F006B8ECD /* TabBarController.swift */; };
 		368E42C224C2B48B006B8ECD /* LifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42C124C2B48B006B8ECD /* LifeViewController.swift */; };
 		368E42C424C2B49B006B8ECD /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42C324C2B49B006B8ECD /* WorkViewController.swift */; };
 		368E42C624C2B4AB006B8ECD /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42C524C2B4AB006B8ECD /* AddViewController.swift */; };
 		368E42C824C2B4BD006B8ECD /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42C724C2B4BD006B8ECD /* ReminderCell.swift */; };
+		368E42CD24C2C204006B8ECD /* Memorandum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42CC24C2C204006B8ECD /* Memorandum.swift */; };
+		368E42D124C37B77006B8ECD /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E42D024C37B77006B8ECD /* InfoController.swift */; };
+		FE1C1D1C93D9272357FB3006 /* Pods_ReminderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D95D724A3C3A65BB8FD5CB /* Pods_ReminderApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +30,16 @@
 		368E42B424C277A0006B8ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		368E42B724C277A0006B8ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		368E42B924C277A0006B8ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		368E42BF24C2B46F006B8ECD /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
+		368E42BF24C2B46F006B8ECD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		368E42C124C2B48B006B8ECD /* LifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeViewController.swift; sourceTree = "<group>"; };
 		368E42C324C2B49B006B8ECD /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 		368E42C524C2B4AB006B8ECD /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		368E42C724C2B4BD006B8ECD /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		368E42CC24C2C204006B8ECD /* Memorandum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memorandum.swift; sourceTree = "<group>"; };
+		368E42D024C37B77006B8ECD /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		36D95D724A3C3A65BB8FD5CB /* Pods_ReminderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReminderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC733992E11F0FD51AE5B62 /* Pods-ReminderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderApp.debug.xcconfig"; path = "Target Support Files/Pods-ReminderApp/Pods-ReminderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A72310FDD7D0A0DC97A02B6 /* Pods-ReminderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderApp.release.xcconfig"; path = "Target Support Files/Pods-ReminderApp/Pods-ReminderApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1C1D1C93D9272357FB3006 /* Pods_ReminderApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		345793244D98F25C7FB58934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D95D724A3C3A65BB8FD5CB /* Pods_ReminderApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		368E429F24C27797006B8ECD = {
 			isa = PBXGroup;
 			children = (
 				368E42AA24C27797006B8ECD /* ReminderApp */,
 				368E42A924C27797006B8ECD /* Products */,
+				7DCB341DD1B5CC74D339ED1F /* Pods */,
+				345793244D98F25C7FB58934 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,17 +85,52 @@
 			children = (
 				368E42AB24C27797006B8ECD /* AppDelegate.swift */,
 				368E42AD24C27797006B8ECD /* SceneDelegate.swift */,
-				368E42B124C27798006B8ECD /* Main.storyboard */,
-				368E42BF24C2B46F006B8ECD /* TapBarController.swift */,
+				368E42CB24C2B6AB006B8ECD /* Model */,
+				368E42C924C2B68B006B8ECD /* Controllers */,
+				368E42CA24C2B693006B8ECD /* View */,
+				368E42B924C277A0006B8ECD /* Info.plist */,
+			);
+			path = ReminderApp;
+			sourceTree = "<group>";
+		};
+		368E42C924C2B68B006B8ECD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				368E42BF24C2B46F006B8ECD /* TabBarController.swift */,
 				368E42C124C2B48B006B8ECD /* LifeViewController.swift */,
 				368E42C324C2B49B006B8ECD /* WorkViewController.swift */,
 				368E42C524C2B4AB006B8ECD /* AddViewController.swift */,
 				368E42C724C2B4BD006B8ECD /* ReminderCell.swift */,
-				368E42B424C277A0006B8ECD /* Assets.xcassets */,
-				368E42B624C277A0006B8ECD /* LaunchScreen.storyboard */,
-				368E42B924C277A0006B8ECD /* Info.plist */,
+				368E42D024C37B77006B8ECD /* InfoController.swift */,
 			);
-			path = ReminderApp;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		368E42CA24C2B693006B8ECD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				368E42B124C27798006B8ECD /* Main.storyboard */,
+				368E42B624C277A0006B8ECD /* LaunchScreen.storyboard */,
+				368E42B424C277A0006B8ECD /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		368E42CB24C2B6AB006B8ECD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				368E42CC24C2C204006B8ECD /* Memorandum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DCB341DD1B5CC74D339ED1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BC733992E11F0FD51AE5B62 /* Pods-ReminderApp.debug.xcconfig */,
+				8A72310FDD7D0A0DC97A02B6 /* Pods-ReminderApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 368E42BC24C277A0006B8ECD /* Build configuration list for PBXNativeTarget "ReminderApp" */;
 			buildPhases = (
+				ACC43AAA011F0F9A60464205 /* [CP] Check Pods Manifest.lock */,
 				368E42A424C27797006B8ECD /* Sources */,
 				368E42A524C27797006B8ECD /* Frameworks */,
 				368E42A624C27797006B8ECD /* Resources */,
+				5B64D7C3D88501EE52B46C87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,16 +201,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B64D7C3D88501EE52B46C87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReminderApp/Pods-ReminderApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReminderApp/Pods-ReminderApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReminderApp/Pods-ReminderApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC43AAA011F0F9A60464205 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReminderApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		368E42A424C27797006B8ECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368E42CD24C2C204006B8ECD /* Memorandum.swift in Sources */,
 				368E42C424C2B49B006B8ECD /* WorkViewController.swift in Sources */,
+				368E42D124C37B77006B8ECD /* InfoController.swift in Sources */,
 				368E42AC24C27797006B8ECD /* AppDelegate.swift in Sources */,
 				368E42C624C2B4AB006B8ECD /* AddViewController.swift in Sources */,
 				368E42C824C2B4BD006B8ECD /* ReminderCell.swift in Sources */,
-				368E42C024C2B46F006B8ECD /* TapBarController.swift in Sources */,
+				368E42C024C2B46F006B8ECD /* TabBarController.swift in Sources */,
 				368E42C224C2B48B006B8ECD /* LifeViewController.swift in Sources */,
 				368E42AE24C27797006B8ECD /* SceneDelegate.swift in Sources */,
 			);
@@ -298,6 +398,7 @@
 		};
 		368E42BD24C277A0006B8ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC733992E11F0FD51AE5B62 /* Pods-ReminderApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +417,7 @@
 		};
 		368E42BE24C277A0006B8ECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A72310FDD7D0A0DC97A02B6 /* Pods-ReminderApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
