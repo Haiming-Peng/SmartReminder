@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class InfoController: UIViewController {
     
+    
+    
+    let realm = try! Realm()
     
     @IBOutlet weak var importanceColor: UIImageView!
     
@@ -60,11 +64,40 @@ class InfoController: UIViewController {
     }
     
     @IBAction func backToReminder(_ sender: Any) {
+        do {
+            try realm.write{
+                selectedReminder?.depiction = descriptionInfo.text
+            }
+        } catch {
+            print("error while saving.")
+        }
         
+        DataManager.shared.life.lifeCollectionView.reloadData()
+           DataManager.shared.work.workCollectionView.reloadData()
+        self.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
     
     
     
 
+}
+
+extension InfoController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+           if textView.textColor == UIColor.lightGray {
+               textView.text = nil
+               textView.textColor = UIColor.black
+           }
+       }
+    
+       
+       func textViewDidEndEditing(_ textView: UITextView) {
+           if textView.text.isEmpty {
+               textView.text = "Description Here"
+               textView.textColor = UIColor.lightGray
+           }
+       }
+    
 }

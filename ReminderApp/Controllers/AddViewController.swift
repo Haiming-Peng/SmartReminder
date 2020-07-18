@@ -40,9 +40,8 @@ class AddViewController: UIViewController {
     let timePicker = UIDatePicker()
     
     @IBOutlet weak var titleField: UITextField!
-    @IBOutlet weak var depictionField: UITextField!
-    
-//     var onViewWillDisappear: (()->())?
+   
+    @IBOutlet weak var depictionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +70,9 @@ class AddViewController: UIViewController {
     }
     
     private func configureTextField() {
-        titleField.delegate = self
-        depictionField.delegate = self
+        depictionTextView.delegate = self
+        depictionTextView.text = "Description Here"
+        depictionTextView.textColor = UIColor.lightGray
     }
     
   
@@ -180,7 +180,7 @@ class AddViewController: UIViewController {
           
 //        }
         storeData.title = titleField.text ?? " "
-        storeData.depiction = depictionField.text ?? " "
+        storeData.depiction = depictionTextView.text ?? " "
         storeData.color = importance ?? "000000"
         storeData.category = categoryName
 //        belongCateogry.items.append(storeData)
@@ -279,12 +279,22 @@ class AddViewController: UIViewController {
     
 }
 
-extension AddViewController: UITextFieldDelegate {
+extension AddViewController: UITextViewDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
     }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Description Here"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+ 
 }
         
         
