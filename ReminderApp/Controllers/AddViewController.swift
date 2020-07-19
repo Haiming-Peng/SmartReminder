@@ -20,11 +20,9 @@ class DataManager {
 
 
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
     
     let realm = try! Realm()
-   
-
     var dateInfo : String?
     var timeInfo : String?
     
@@ -38,10 +36,8 @@ class AddViewController: UIViewController {
 
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
-    
     @IBOutlet weak var titleField: UITextField!
-   
-    @IBOutlet weak var depictionTextView: UITextView!
+       @IBOutlet weak var depictionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +47,9 @@ class AddViewController: UIViewController {
         createTimePicker()
         configureTextField()
         configureTapGesture()
+        titleField.delegate = self
         doneButton.isEnabled = false
-        
+        checkFilled()
     }
 
   
@@ -80,6 +77,17 @@ class AddViewController: UIViewController {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         checkFilled()
     }
+    
+    
+    
+    func checkFilled() {
+        if dateField.text != "" && timeField.text != "" && titleField.text?.isEmpty == false {
+            
+            doneButton.isEnabled = true
+        }
+    }
+    
+    
     //MARK: - Date and Time TextField
 
     
@@ -253,12 +261,7 @@ class AddViewController: UIViewController {
        
     }
     
-    func checkFilled() {
-        if dateField.text != "" && timeField.text != "" && titleField.text != "" {
-            
-            doneButton.isEnabled = true
-        }
-    }
+    
     
     //MARK: - save and load Data
     
@@ -295,6 +298,17 @@ extension AddViewController: UITextViewDelegate {
         }
     }
  
+}
+
+extension AddViewController {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        checkFilled()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        checkFilled()
+        return true
+    }
 }
         
         

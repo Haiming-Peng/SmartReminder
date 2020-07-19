@@ -444,7 +444,7 @@
                     <connections>
                         <outlet property="dateField" destination="meu-3L-1d7" id="o2F-To-cyY"/>
                         <outlet property="depictionTextView" destination="CNu-20-G55" id="sA9-ps-Bsd"/>
-                        <outlet property="doneButton" destination="QNo-PN-cSB" id="fIY-Um-pdp"/>
+                        <outlet property="doneButton" destination="QNo-PN-cSB" id="rBj-tg-INe"/>
                         <outlet property="timeField" destination="Q3X-Zq-apA" id="Zlz-oO-afb"/>
                         <outlet property="titleField" destination="jyv-aP-t7v" id="na1-3Q-GCu"/>
                     </connections>
